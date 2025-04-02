@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Immobilier - Bien immobilier en toute sérénité!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        body { background-color: #504f4f; color: #fff; }
+        .neon-text { text-shadow: 0 0 10px #00e6e6, 0 0 20px #00e6e6, 0 0 30px #00e6e6; }
+        .glow-button:hover { box-shadow: 0 0 20px #00e6e6; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+    <header class="bg-black py-4 px-6 flex justify-between items-center border-b border-gray-700 fixed top-0 w-full z-50 shadow-lg" data-aos="fade-down">
+        <div class="container mx-auto flex items-center">
+            <img src="images/EASY PNG.png" alt="Logo" class="w-16">
+            <h1 class="text-3xl font-bold neon-text ml-3">Easy Immobilier</h1>
+        </div>
+    
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="#accueil" class="text-gray-300 hover:text-cyan-400">Accueil</a></li>
+                <li><a href="#services" class="text-gray-300 hover:text-cyan-400">Services</a></li>
+                <li><a href="#contact" class="text-gray-300 hover:text-cyan-400">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="mt-20">
+  <div class="bg-blue-600 text-white p-6">
+    <h1 class="text-3xl font-semibold text-center">Estimation Immobilière en Ligne</h1>
+    <p class="text-lg text-center mt-2">Obtenez une estimation précise des biens immobiliers en ligne.</p>
+  </div>
+
+  <div class="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
+    <h2 class="text-2xl font-semibold text-center mb-6">Estimation du prix de votre bien immobilier</h2>
+
+    <form id="estimateForm">
+      <div class="mb-4">
+        <label for="typeBien" class="block text-gray-700 font-medium">Type de bien</label>
+        <select id="typeBien" class="mt-2 p-2 w-full border rounded-md">
+          <option value="maison">Maison</option>
+          <option value="appartement">Appartement</option>
+          <option value="terrain">Terrain</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <label for="surface" class="block text-gray-700 font-medium">Surface en m²</label>
+        <input type="number" id="surface" class="mt-2 p-2 w-full border rounded-md" placeholder="Entrez la surface du bien">
+      </div>
+
+      <div class="mb-4">
+        <label for="localisation" class="block text-gray-700 font-medium">Localisation</label>
+        <input type="text" id="localisation" class="mt-2 p-2 w-full border rounded-md" placeholder="Entrez la localisation du bien">
+      </div>
+
+      <div class="mb-4">
+        <label for="prixMarché" class="block text-gray-700 font-medium">Prix au m² sur le marché actuel</label>
+        <input type="number" id="prixMarché" class="mt-2 p-2 w-full border rounded-md" placeholder="Entrez le prix moyen au m²">
+      </div>
+
+      <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700">Obtenir l'estimation</button>
+    </form>
+  </div>
+
+  <!-- Résultat Estimation -->
+  <div class="max-w-4xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg" id="resultSection" style="display: none;">
+    <h2 class="text-2xl font-semibold text-center mb-6">Estimation du prix</h2>
+    <p id="estimatedPrice" class="text-lg text-center font-medium text-gray-700"></p>
+  </div>
+</section>
+  <script>
+    document.getElementById('estimateForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Récupération des valeurs
+      const typeBien = document.getElementById('typeBien').value;
+      const surface = parseFloat(document.getElementById('surface').value);
+      const localisation = document.getElementById('localisation').value;
+      const prixMarché = parseFloat(document.getElementById('prixMarché').value);
+
+      // Calcul de l'estimation
+      const estimation = surface * prixMarché;
+
+      // Affichage du résultat
+      const resultSection = document.getElementById('resultSection');
+      const estimatedPrice = document.getElementById('estimatedPrice');
+      estimatedPrice.textContent = `L'estimation de votre bien (${typeBien} à ${localisation}) est de : ${estimation.toLocaleString()} FCFA.`;
+
+      resultSection.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
+
+
+    <footer id="contact" class="bg-blue-500 text-gray-300 py-6 text-center mt-16 border-t border-gray-700" data-aos="fade-up">
+        <p>Contact : info@easy-immobilier.com</p>
+        <div class="flex justify-center space-x-6 mt-2">
+            <a href="#" class="text-black hover:text-white"><i class="icon ion-social-facebook text-2xl"></i></a>
+            <a href="#" class="text-black hover:text-white"><i class="icon ion-social-twitter text-2xl"></i></a>
+            <a href="#" class="text-black hover:text-white"><i class="icon ion-social-snapchat text-2xl"></i></a>
+            <a href="#" class="text-black hover:text-white"><i class="icon ion-social-instagram text-2xl"></i></a>
+        </div>
+    </footer>
+
+    <p class="text-center font-bold text-sm text-gray-300 mt-2">Easy Immobilier © 2025, Tous droits réservés.</p>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
+</body>
+</html>

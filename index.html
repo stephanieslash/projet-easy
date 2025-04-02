@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Immobilier - bien immobilier en toute sérénité!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="dist/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="script.js" defer></script>
+    <style>
+        body { background-color: #0a0a0a; color: #fff; }
+        .neon-text { text-shadow: 0 0 10px #00e6e6, 0 0 20px #00e6e6, 0 0 30px #00e6e6; }
+        .glow-button:hover { box-shadow: 0 0 20px #00e6e6; }
+        html {
+    scroll-behavior: smooth;
+}
+    </style>
+</head>
+<body>
+    <header class="bg-black py-4 px-6 flex justify-between items-center border-b border-gray-700 fixed top-0 w-full z-50 shadow-lg" data-aos="fade-down">
+        <div class="container mx-auto flex items-center">
+            <img src="images/EASY PNG.png" alt="Logo" class="w-16">
+            <h1 class="text-3xl font-bold neon-text ml-3">Easy Immobilier</h1>
+        </div>
+    
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="#accueil" class="text-gray-300 hover:text-cyan-400 hover:no-underline">Accueil</a></li>
+                <li><a href="#services" class="text-gray-300 hover:text-cyan-400 hover:no-underline">Services</a></li>
+                <li><a href="#contact" class="text-gray-300 hover:text-cyan-400 hover:no-underline">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="accueil" class="h-screen flex flex-col justify-center items-center text-center bg-white relative" style="background-image: url('https://img.freepik.com/photos-premium/heureux-couple-etreindre-devant-nouvelle-maison_13339-178625.jpg?w=996');">
+       <div class="bg-black opacity-80 rounded-lg">
+        <h2 class="text-4xl font-bold neon-text">Sécurisez vos Transactions Immobilières à Abidjan</h2>
+        <p class="text-lg text-gray-300 mt-4">Des solutions digitales et transparentes pour un marché immobilier sécurisé</p>
+        <button class="mt-6 px-6 py-3 bg-cyan-400 text-black font-semibold rounded-lg glow-button transition">Découvrir</button>
+       </div>
+       <div id="bien" class="p-10" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-gray-100">Rechercher un bien</h2>
+        <input type="text" class="border p-2 w-full mt-2 text-gray-600" placeholder="Entrez un critère de recherche...">
+       </div>
+    </section>
+
+    <section id="services" class="py-16 px-8 bg-gray-900 text-gray-300" data-aos="fade-left">
+        <h2 class="text-3xl font-bold text-center mb-10 neon-text">Nos Services</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="p-6 bg-black rounded-xl shadow-md hover:scale-105 transform transition">
+                📹 <a href="visite.html" class="text-cyan-400 hover:underline">
+                    <h3 class="text-xl font-semibold"> Visites Virtuelles</h3></a>
+                <p class="mt-2">Explorez les biens en 3D avec une immersion complète.</p>
+            </div>
+            <div class="p-6 bg-black rounded-xl shadow-md hover:scale-110 transform transition">
+                🌍 <a href="acdiaspo.html" class="text-cyan-400 hover:underline"> 
+                    <h3 class="text-xl font-semibold">Accompagnement Diaspora</h3></a>
+                <p class="mt-2">Un service personnalisé pour les achats à distance.</p>
+            </div>
+            <div class="p-6 bg-black rounded-xl shadow-md hover:scale-110 transform transition">
+                🏢 <a href="streel.html" class="text-cyan-400 hover:underline"> 
+                    <h3 class="text-xl font-semibold">Suivi en temps réel</h3></a>
+                <p class="mt-2">Restez informé de l'état de vos documents immobiliers.</p>
+            </div>
+            <div class="p-6 bg-black rounded-xl shadow-md hover:scale-110 transform transition">
+                ⚖️ <a href="juridi.html" class="text-cyan-400 hover:underline"> 
+                    <h3 class="text-xl font-semibold">Conseil juridique</h3> </a> 
+                <p class="mt-2">Un accompagnement légal pour sécuriser vos transactions.</p>
+            </div>
+            <div class="p-6 bg-black rounded-xl shadow-md hover:scale-110 transform transition">
+                🔍 <a href="autdoc.html" class="text-cyan-400 hover:underline"> 
+                    <h3 class="text-xl font-semibold">Authentification des Documents</h3> </a> 
+                <p class="mt-2">Sécurisez vos transactions en ligne.</p>
+            </div>
+            <div class="p-6 bg-black rounded-xl shadow-md hover:scale-110 transform transition">
+                📄 <a href="digidoc.html" class="text-cyan-400 hover:underline"> 
+                    <h3 class="text-xl font-semibold">Digitalisation des documents</h3></a>
+                <p class="mt-2">Tous vos documents accessibles en ligne de manière sécurisée.</p>
+            </div>
+            <div class="p-6 bg-black rounded-xl shadow-md hover:scale-110 transform transition">
+                📈 <a href="evlign.html" class="text-cyan-400 hover:underline"> 
+                    <h3 class="text-xl font-semibold">Évaluation en ligne</h3></a>
+                <p class="mt-2">Obtenez une estimation précise des biens immobiliers en ligne.</p>
+            </div>
+            <div class="p-6 bg-black rounded-xl shadow-md hover:scale-110 transform transition">
+                📊 <a href="barimo.html" class="text-cyan-400 hover:underline"> 
+                    <h3 class="text-xl font-semibold">Baromètre des agents immobiliers</h3></a>
+                <p class="mt-2">Évaluez la réputation et la fiabilité des agents.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <footer id="contact" class="bg-blue-500 text-gray-300 py-6 text-center mt-16 border-t border-gray-700" data-aos="fade-up">
+        <p>Contact : info@easy-immobilier.com</p>
+        <div class="item social flex justify-center space-x-6">
+            <a href="#" class="text-black hover:text-white"><i class="icon ion-social-facebook text-2xl"></i></a>
+            <a href="#" class="text-black hover:text-white"><i class="icon ion-social-twitter text-2xl"></i></a>
+            <a href="#" class="text-black hover:text-white"><i class="icon ion-social-snapchat text-2xl"></i></a>
+            <a href="#" class="text-black hover:text-white"><i class="icon ion-social-instagram text-2xl"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: true,
+        });
+    </script>
+
+    <p class="text-center font-bold text-sm text-gray-500">Easy Immobilier © 2025, Tous droits réservés. </p>
+</body>
+</html>
